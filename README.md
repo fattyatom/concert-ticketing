@@ -1,5 +1,5 @@
 <div align="center">
-    <h1>EasyConcertKorea</h1>
+    <h1>Concert Ticketing</h1>
 <br>
 </div>
 
@@ -37,4 +37,4 @@ This Chrome extension streamlines the process of finding and booking concert tic
 
 ## Credits
 
-* <strong><a href="https://github.com/BastienBoymond">Bastien Boymond</a></strong>
+* Original Author - <strong><a href="https://github.com/BastienBoymond">Bastien Boymond</a></strong>
