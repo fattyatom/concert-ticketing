@@ -9,12 +9,11 @@ function select_day(day) {
 
     for (let i = 0; i < num; i++) {
         let dayElement = daysAvaible.children[i];
-        if (dayElement.getAttribute("data-perfday") == day) {
+        if (dayElement.getAttribute("data-perfday") === day) {
             dayElement.children[0].click();
             return;
         }
     }
-    return;
 }
 
 function select_time(time) {
@@ -29,16 +28,13 @@ function select_time(time) {
             return;
         }
     }
-    return;
 }
 
 async function isPlaceOpen() {
     let selector = document.getElementsByClassName("box_ticketing_process")[0];
-    
-    if (selector.style.display == "none") {
-        return false;
-    }
-    return true;
+
+    return selector.style.display !== "none";
+
 }
 
 async function searchConcert() {
@@ -59,23 +55,11 @@ async function searchConcert() {
     await sleep(500);
     select_time(formatTime(data.time));
     await sleep(500);
-
-    await sleep(5000);
     
     document.getElementsByClassName("reservationBtn")[0].click();
 
 
     console.log("clicked reservation");
-}
-
-function simulateMouseEvent(element, eventType) {
-    const event = new MouseEvent(eventType, {
-        bubbles: true,
-        cancelable: true,
-        isTrusted: true,
-    });
-
-    element.dispatchEvent(event);
 }
 
 searchConcert();

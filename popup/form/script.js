@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function  () {
         for (const [key, value] of formData.entries()) {
             data[key] = value;
         }
-        data["section"] = data["section"].split(",");
+        data["section"] = !!data["section"] ? data["section"].split(",") : [];
         data["platform"] = form.getElementsByTagName("button")[0].id;
         let array = await get_stored_value("autoBooking") || [];
         store_value(data["concert-id"], data);

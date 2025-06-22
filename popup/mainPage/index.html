@@ -5,26 +5,38 @@
     <title>EasyKoreaConcert</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="script.js"></script>
 </head>
 <body>
-    <h1 class="main-color">EasyKoreaConcert</h1>
-    <div class="button-row">
-        <a href="../melonticketForm/melonticket.html" class="button-concert">
-            <img src="../../assets/melonticket_logo.png" alt="melonticket">
-            <div class="booking-site">Melon Ticket</div>
-        </a>
-        <a href="../yes24Form/yes24.html" class="button-concert">
-            <img src="../../assets/yes24_logo.png" alt="Yes24">
-            <div class="booking-site">Yes24</div>
-        </a>
-        <a href="../interparkForm/interpark.html" class="button-concert">
-            <img src="../../assets/interpark_logo.png" alt="Interpark">
-            <div class="booking-site">Interpark</div>
-        </a>
-    </div>
-    <div class="list-booking-container" id="list-booking">
+<h1 class="main-color">EasyKoreaConcert</h1>
 
+<!-- Global Settings Section -->
+<div class="settings-container">
+    <h2>Global Settings</h2>
+    <div class="setting-item">
+        <label for="captcha-url">Captcha Solver URL:</label>
+        <input type="url" id="captcha-url" placeholder="http://127.0.0.1:5000/solve_captcha">
+        <button id="save-settings-btn" class="button-save">Save</button>
     </div>
+</div>
+
+<div class="button-row">
+    <a href="../melonticketForm/melonticket.html" class="button-concert">
+        <img src="../../assets/melonticket_logo.png" alt="melonticket">
+        <div class="booking-site">Melon Ticket</div>
+    </a>
+    <a href="../yes24Form/yes24.html" class="button-concert">
+        <img src="../../assets/yes24_logo.png" alt="Yes24">
+        <div class="booking-site">Yes24</div>
+    </a>
+    <a href="../interparkForm/interpark.html" class="button-concert">
+        <img src="../../assets/interpark_logo.png" alt="Interpark">
+        <div class="booking-site">Interpark</div>
+    </a>
+</div>
+<div class="list-booking-container" id="list-booking">
+    <!-- Auto-booking items will be loaded here by the script -->
+</div>
+
+<script type="module" src="script.js"></script>
 </body>
 </html>
